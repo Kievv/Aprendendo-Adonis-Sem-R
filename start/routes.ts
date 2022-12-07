@@ -27,9 +27,9 @@ Route.get("/", async () => {
 // Rotas vão aqui e usando o comando no terminal node ace list:routes conseguimos acessar a estrutura de rotas da API
 
 Route.group(() => {
-  Route.get("/produtos", "Controller.method");
-  Route.get("/produtos/{id}", "Controller.method");
-  Route.post("/produtos", "Controller.method");
-  Route.put("/produtos/{id}", "Controller.method");
-  Route.delete("/produtos/{id}", "Controller.method");
+  Route.get("/produtos", "ProdutosController.index");
+  Route.get("/produtos/{id}", "ProdutosController.index");
+  Route.post("/produtos", "ProdutosController.novo");
+  Route.put("/produtos/{id}", "ProdutosController.editar");
+  Route.delete("/produtos/{id}", "ProdutosController.remover");
 });
